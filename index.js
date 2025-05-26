@@ -10,6 +10,10 @@ require("./swagger")(app);
 app.use(express.json());
 app.use(morgan('dev'))
 
+app.get("/",(req,res)=>{
+    res.send("Welcome to Book Store Service");
+})
+
 app.use('/api/v1/books',bookRoutes)
 
 
